@@ -7,5 +7,5 @@ predict the value of each segment based on its pixel values.
 
 Instructions:
 1. Create a new word document with Courier New size 36 font, and export the document to a pdf file
-2. Upload this file, or any of the files located in the Sample_Files/ folder from the Upload Image button
+2. In the application, press Upload Image to upload this file, or any of the files located in the Sample_Files folder 
 3. Press Translate to Text in order to convert the image file to a typed out transcription
