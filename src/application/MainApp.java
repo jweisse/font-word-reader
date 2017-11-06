@@ -61,7 +61,7 @@ public class MainApp extends Application {
 			else if(osName.startsWith("Mac OS X")){
 				inputStream = MainApp.class.getClassLoader().getResourceAsStream(
 						Core.NATIVE_LIBRARY_NAME + ".dylib");
-	            fileOut = File.createTempFile("lib", ".dylib");
+				fileOut = File.createTempFile("lib", ".dylib");
 			}
 			else {
 				throw new Exception("Program only compatible with Mac OS X and Windows 64 bit systems");
@@ -70,7 +70,7 @@ public class MainApp extends Application {
 			IOUtils.copy(inputStream, out);
 			inputStream.close();
 			out.close();
-	        System.load(fileOut.toString());
+			System.load(fileOut.toString());
 		}
 		else {
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
@@ -99,8 +99,8 @@ public class MainApp extends Application {
 	}
 
 	public Stage getPrimaryStage() {
-        return primaryStage;
-    }
+		return primaryStage;
+	}
 
 	private void initUploadPage() {
 		try {
@@ -110,8 +110,8 @@ public class MainApp extends Application {
 			Scene scene = new Scene(layout);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-	        UploadPageController controller = loader.getController();
-	        controller.setMainApp(this);
+			UploadPageController controller = loader.getController();
+			controller.setMainApp(this);
 
 		} catch (IOException e) {
 			e.printStackTrace();
