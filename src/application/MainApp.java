@@ -58,13 +58,8 @@ public class MainApp extends Application {
 						Core.NATIVE_LIBRARY_NAME + ".dll");
 				fileOut = File.createTempFile("lib", ".dll");
 			}
-			else if(osName.startsWith("Mac OS X")){
-				inputStream = MainApp.class.getClassLoader().getResourceAsStream(
-						Core.NATIVE_LIBRARY_NAME + ".dylib");
-				fileOut = File.createTempFile("lib", ".dylib");
-			}
 			else {
-				throw new Exception("Program only compatible with Mac OS X and Windows 64 bit systems");
+				throw new Exception("Program only compatible with Windows 64 bit systems");
 			}
 			OutputStream out = FileUtils.openOutputStream(fileOut);
 			IOUtils.copy(inputStream, out);
